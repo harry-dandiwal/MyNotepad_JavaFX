@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+
+<Pane fx:id="replacePane" prefHeight="171.0" prefWidth="538.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EditorWithFX.EditorController">
+   <children>
+      <HBox layoutX="171.0" layoutY="111.0" prefHeight="39.0" prefWidth="205.0">
+         <children>
+            <TextField fx:id="replaceTF" prefHeight="51.0" prefWidth="206.0" />
+         </children>
+      </HBox>
+      <HBox layoutX="171.0" layoutY="54.0" prefHeight="39.0" prefWidth="205.0">
+         <children>
+            <TextField fx:id="findTF" prefHeight="53.0" prefWidth="209.0" />
+         </children>
+      </HBox>
+      <Button fx:id="findBtn" layoutX="412.0" layoutY="63.0" mnemonicParsing="false"  prefHeight="31.0" prefWidth="72.0" text="Find" />
+      <Button fx:id="replaceBtn" layoutX="412.0" layoutY="111.0" mnemonicParsing="false" onAction="#onReplaceClick" prefHeight="31.0" prefWidth="72.0" text="Replace" />
+      <Label layoutX="74.0" layoutY="56.0" text="Find What">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="52.0" layoutY="113.0" text="Replace With">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

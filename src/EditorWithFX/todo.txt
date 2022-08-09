@@ -1,0 +1,4 @@
+1. When cross is pressed on notepad, it should not close but prompt for save if there is text in the file and it is titled "Untitled"
+2. fontcolor needs to be done
+3. setbackfround color needs to be done
+4. replace needs to be done

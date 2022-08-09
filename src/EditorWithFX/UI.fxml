@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.input.*?>
+
+<BorderPane  xmlns:fx="http://javafx.com/fxml/1"  prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" 
+            fx:controller="EditorWithFX.EditorController" fx:id="rootPane" >
+    <top>
+        <MenuBar BorderPane.alignment="CENTER" fx:id="menubar">
+            <Menu text="File" fx:id="fileMenu" onAction="#onFile" styleClass="menu">
+            <items>
+                <MenuItem onAction="#onNew" text="New" />
+                <MenuItem onAction="#onOpen" text="Open" />
+                <MenuItem onAction="#onSave" text="Save" fx:id="save">
+            <accelerator>
+<!--  make this work                  <KeyCodeCombination alt="UP" code="O" control="DOWN" meta="UP" shift="UP" shortcut="UP" />-->
+                    
+            </accelerator>
+                </MenuItem>
+                <MenuItem onAction="#onSaveAs" text="Save As" />
+                <SeparatorMenuItem/>
+                <MenuItem onAction="#onPageSetup" text="Page Setup" />
+                <MenuItem onAction="#onPrint" text="Print" />
+                <SeparatorMenuItem/>
+                <MenuItem onAction="#onClose" text="Close" />
+            </items>
+            </Menu>
+            <Menu text="Edit" styleClass="menu">
+                <MenuItem text="Cut" onAction="#onCut"/>
+                <MenuItem text="Copy" onAction="#onCopy"/>
+                <MenuItem text="Paste" onAction="#onPaste"/>
+                <MenuItem text="Replace" onAction="#onReplace"/>
+                <MenuItem text="Date/Time" onAction="#onDateTime"/>
+            </Menu>
+            <Menu text="Format" styleClass="menu">
+               <MenuItem text="Font" onAction="#onFont" />
+                <MenuItem fx:id="fontColor" text="Font-Color" onAction="#onFontColor"/>
+                <MenuItem text="Editor Background" onAction="#onEdBackground"/>
+            </Menu>
+            <Menu text="Help">
+                <MenuItem text="About" />
+            </Menu>
+        </MenuBar>
+    </top>
+    <bottom>
+        <HBox prefHeight="51.0" prefWidth="600.0" BorderPane.alignment="CENTER" />
+    </bottom>
+    <center>
+        <TextArea fx:id="textArea" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+    </center>
+<!--    <right>
+        <ScrollBar orientation="VERTICAL" BorderPane.alignment="CENTER" />
+    </right>-->
+</BorderPane>
